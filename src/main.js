@@ -5,14 +5,14 @@ import router from '@/router/index'
 import VueRouter from 'vue-router'
 import store from "@/store/index.js"
 import Vuex from 'vuex'
+import axios from "axios";
 // import ViewUI from 'view-design';
 import "@/utils/viewui.js"
 import {Button} from "view-design" ;
 Vue.use(Button);
 Vue.use(VueRouter)
 Vue.use(Vuex)
-// Vue.use(ViewUI);
-
+Vue.prototype.$http = axios;
 Vue.config.productionTip = false
 
 new Vue({

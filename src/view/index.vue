@@ -1,17 +1,16 @@
 <template>
   <div>
-    <h1>{{$store.state.count}}</h1>
-    <Button type="primary" @click="change">点击</Button>
-
+    <common></common> 
   </div>
 </template>
 
 <script>
+import common from "@/common/index"
   export default {
+    components: {
+      common
+    },
     methods: {
-      change() {
-        this.$store.dispatch("changes");
-      }
     },
   }
 </script>
